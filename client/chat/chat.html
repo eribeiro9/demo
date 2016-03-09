@@ -1,0 +1,19 @@
+<template name="chat">
+    <div>
+        {{#each messages}}
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">{{usernameOf sender}}</h4>
+                    {{message}}
+                </div>
+            </div>
+            <hr />
+        {{/each}}
+    </div>
+    <div>
+        <form>
+            <input type="text" name="message" placeholder="Say something" class="form-control">
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+</template>
